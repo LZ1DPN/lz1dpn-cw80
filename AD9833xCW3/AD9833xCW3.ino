@@ -22,6 +22,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 // Include the library code
 #include <SPI.h>
+#include <Wire.h>
 #include <rotary.h>
 #include <Adafruit_SSD1306.h>
 #define OLED_RESET 5   //12
