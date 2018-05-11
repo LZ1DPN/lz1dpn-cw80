@@ -59,7 +59,7 @@ Rotary r = Rotary(3,2); // sets the pins for rotary encoder uses.  Must be inter
 unsigned long rx=3500000; // Starting frequency of VFO
 unsigned long rx2=1; // temp variable to hold the updated frequency
 unsigned long rxof=800; //800
-unsigned long freqIF=6000000;
+unsigned long freqIF=4000000;
 //unsigned long rxif=(freqIF-rxof); // IF freq, will be summed with vfo freq - rx variable, my xtal filter now is made from 6 MHz xtals
 unsigned long rxRIT=0;
 int RITon=0;
@@ -94,7 +94,7 @@ pinMode(FBUTTON,INPUT); // Connect to a button that goes to GND on push - rotary
 digitalWrite(FBUTTON,HIGH);  //level
 
 // Initialize the Serial port so that we can use it for debugging
-Serial.begin(115200);
+//Serial.begin(115200);
   
 // Can't set SPI MODE here because the display and the AD9833 use different MODES.
 SPI.begin();
@@ -104,7 +104,7 @@ delay(50);
   delay(50);
   AD9833setFrequency((rx+freqIF), SQUARE);                  // Set the frequency and Sine Wave output
   
-  Serial.println("Start VFO ver 12.0");
+  //  Serial.println("Start VFO ver 12.0");
 
   // by default, we'll generate the high voltage from the 3.3v line internally! (neat!)
   display.begin(SSD1306_SWITCHCAPVCC, 0x3C);  // initialize with the I2C address 0x3C (for oled 128x32)
@@ -146,7 +146,6 @@ void loop() {
   if ((rx != rx2) || (RITon == 1)){
       showFreq();
       AD9833setFrequency((rx+freqIF), SQUARE);     // Set AD9833 to frequency and selected wave type.
-      Serial.println(rx);
       rx2 = rx;
       }
 

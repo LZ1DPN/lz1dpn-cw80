@@ -64,10 +64,10 @@ const float refFreq = 25000000.0;           // On-board crystal reference freque
 Rotary r = Rotary(3,2); // sets the pins for rotary encoder uses.  Must be interrupt pins.
   
 //unsigned long xit=1200; // RIT +600 Hz
-unsigned long rx=35000000; // Starting frequency of VFO
+unsigned long rx=35240000; // Starting frequency of VFO
 unsigned long rx2=1; // temp variable to hold the updated frequency
 unsigned long rxof=800; //800
-unsigned long freqIF=4000000;
+unsigned long freqIF=6000000;
 //unsigned long rxif=(freqIF-rxof); // IF freq, will be summed with vfo freq - rx variable, my xtal filter now is made from 6 MHz xtals
 unsigned long rxRIT=0;
 int RITon=0;
