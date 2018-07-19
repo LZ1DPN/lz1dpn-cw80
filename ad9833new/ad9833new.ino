@@ -256,8 +256,8 @@ BTNdecodeON = digitalRead(BTNDEC);
     if(BTNdecodeON == LOW){
          BTNinc = BTNinc + 1;
          
-         if(BTNinc > 6){
-              BTNinc = 3;
+         if(BTNinc > 3){
+              BTNinc = 1;
               }
               
           switch (BTNinc) {
