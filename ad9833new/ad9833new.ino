@@ -57,7 +57,7 @@ Rotary r = Rotary(3,2); // sets the pins for rotary encoder uses.  Must be inter
 //unsigned long xit=1200; // RIT +600 Hz
 unsigned long rx=3500000; // Starting frequency of VFO
 unsigned long rx2=1; // temp variable to hold the updated frequency
-unsigned long rxof=1000; //800
+unsigned long rxof=0; //800
 unsigned long freqIF=6000000;
 //unsigned long rxif=(freqIF-rxof); // IF freq, will be summed with vfo freq - rx variable, my xtal filter now is made from 6 MHz xtals
 int rxRIT=0;
@@ -257,7 +257,7 @@ BTNdecodeON = digitalRead(BTNDEC);
     if(BTNdecodeON == LOW){
          BTNinc = BTNinc + 1;
          
-         if(BTNinc > 3){
+         if(BTNinc > 8){
               BTNinc = 1;
               }
               

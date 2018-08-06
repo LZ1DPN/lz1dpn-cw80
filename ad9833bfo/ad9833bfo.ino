@@ -35,7 +35,7 @@ const float refFreq = 25000000.0;           // On-board crystal reference freque
 #define pulseHigh(pin) {digitalWrite(pin, HIGH); digitalWrite(pin, LOW); }
 Rotary r = Rotary(3,2); // sets the pins for rotary encoder uses.  Must be interrupt pins.
   
-unsigned long rx=5998900; // Starting frequency of VFO
+unsigned long rx=5998932; // Starting frequency of VFO    5998900  5999080 5998880
 unsigned long rx2=1; // temp variable to hold the updated frequency
 unsigned long increment = 50; // starting VFO update increment in HZ. tuning step
 int buttonstate = 0;   // temp var
